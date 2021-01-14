@@ -45,7 +45,7 @@ impl Light for MyLight {
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let addr = "0.0.0.0:50051".parse()?;
     let light = MyLight {
-        pin: Arc::new(Mutex::new(Gpio::new().unwrap().get(18).unwrap().into_output()))
+        pin: Arc::new(Mutex::new(Gpio::new()?.get(18)?.into_output()))
     };
 
     println!("GreeterServer listening on {}", addr);
