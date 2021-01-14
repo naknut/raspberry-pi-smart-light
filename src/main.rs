@@ -19,11 +19,7 @@ pub struct MyLight {
 #[tonic::async_trait]
 impl Light for MyLight {
     async fn is_on(&self, _request: Request<Empty>) -> Result<Response<BoolValue>, Status> {
-        let reply = BoolValue {
-            value: Arc::clone(&self.pin).lock().unwrap().is_set_high()
-        };
-
-        Ok(Response::new(reply))
+        Ok(Response::new(BoolValue { value: Arc::clone(&self.pin).lock().unwrap().is_set_high() }))
     }
 
     async fn set_is_on(&self, request: Request<BoolValue>) -> Result<Response<Empty>, Status> {
