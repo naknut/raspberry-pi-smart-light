@@ -5,7 +5,7 @@ use smart_light::{Empty, BoolValue};
 use std::sync::{Arc, Mutex};
 
 use rppal::gpio::Gpio;
-use rppal::gpio::{OutputPin};
+use rppal::gpio::{Level, OutputPin};
 
 pub mod smart_light {
     tonic::include_proto!("smartlight"); // The string specified here must match the proto package name
@@ -23,15 +23,9 @@ impl Light for MyLight {
     }
 
     async fn set_is_on(&self, request: Request<BoolValue>) -> Result<Response<Empty>, Status> {
-        let pin_clone = Arc::clone(&self.pin);
-        let mut pin = pin_clone.lock().unwrap();
-        let new_value = request.into_inner().value;
-
-        if new_value {
-            pin.set_high();
-        } else {
-            pin.set_low();
-        }
+        let pin = Arc::clone(&self.pin);
+        let new_value = if request.into_inner().value { Level::High } else { Level::Low };
+        pin.lock().unwrap().write(new_value);
 
         Ok(Response::new(Empty {}))
     }
@@ -44,7 +38,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         pin: Arc::new(Mutex::new(Gpio::new()?.get(18)?.into_output()))
     };
 
-    println!("GreeterServer listening on {}", addr);
+    println!("Listening on {}", addr);
 
     Server::builder()
         .add_service(LightServer::new(light))
