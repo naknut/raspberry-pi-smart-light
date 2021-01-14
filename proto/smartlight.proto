@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package smartlight;
+
+service Light {
+    rpc IsOn(Empty) returns (BoolValue);
+    rpc SetIsOn(BoolValue) returns (Empty);
+}
+
+message Empty { }
+message BoolValue {
+    bool value = 1;
+};

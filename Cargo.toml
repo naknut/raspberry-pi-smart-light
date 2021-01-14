@@ -1,0 +1,13 @@
+[package]
+name = "raspberry-pi-smart-light"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+tonic = "0.3"
+prost = "0.6"
+tokio = { version = "0.2", features = ["macros"] }
+rppal = "0.11.3"
+
+[build-dependencies]
+tonic-build = "0.3"
