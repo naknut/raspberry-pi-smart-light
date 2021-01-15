@@ -8,7 +8,7 @@ use rppal::gpio::Gpio;
 use rppal::gpio::{Level, OutputPin};
 
 pub mod smart_light {
-    tonic::include_proto!("smartlight"); // The string specified here must match the proto package name
+    tonic::include_proto!("smartlight");
 }
 
 #[derive(Debug)]
@@ -23,10 +23,7 @@ impl Light for MyLight {
     }
 
     async fn set_is_on(&self, request: Request<BoolValue>) -> Result<Response<Empty>, Status> {
-        let pin = Arc::clone(&self.pin);
-        let new_value = if request.into_inner().value { Level::High } else { Level::Low };
-        pin.lock().unwrap().write(new_value);
-
+        Arc::clone(&self.pin).lock().unwrap().write(if request.into_inner().value { Level::High } else { Level::Low });
         Ok(Response::new(Empty {}))
     }
 }
