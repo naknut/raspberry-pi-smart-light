@@ -34,14 +34,10 @@ impl Light for MyLight {
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let addr = "0.0.0.0:50051".parse()?;
-    let light = MyLight {
-        pin: Arc::new(Mutex::new(Gpio::new()?.get(18)?.into_output()))
-    };
 
     println!("Listening on {}", addr);
-
     Server::builder()
-        .add_service(LightServer::new(light))
+        .add_service(LightServer::new(MyLight { pin: Arc::new(Mutex::new(Gpio::new()?.get(18)?.into_output())) }))
         .serve(addr)
         .await?;
 
