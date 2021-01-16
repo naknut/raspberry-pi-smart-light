@@ -12,12 +12,12 @@ pub mod smart_light {
 }
 
 #[derive(Debug)]
-pub struct MyLight {
+pub struct Output {
     pin: Mutex<OutputPin>
 }
 
 #[tonic::async_trait]
-impl Light for MyLight {
+impl Light for Output {
     async fn is_on(&self, _request: Request<Empty>) -> Result<Response<BoolValue>, Status> {
         Ok(Response::new(BoolValue { value: self.pin.lock().unwrap().is_set_high() }))
     }
@@ -34,7 +34,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Listening on {}", addr);
     Server::builder()
-        .add_service(LightServer::new(MyLight { pin: Mutex::new(Gpio::new()?.get(18)?.into_output()) }))
+        .add_service(LightServer::new(Output { pin: Mutex::new(Gpio::new()?.get(18)?.into_output()) }))
         .serve(addr)
         .await?;
 
