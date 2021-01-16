@@ -2,7 +2,7 @@ use tonic::{transport::Server, Request, Response, Status};
 
 use smart_light::light_server::{Light, LightServer};
 use smart_light::{Empty, BoolValue};
-use std::sync::{Arc, Mutex};
+use std::sync::{Mutex};
 
 use rppal::gpio::Gpio;
 use rppal::gpio::{Level, OutputPin};
@@ -13,17 +13,17 @@ pub mod smart_light {
 
 #[derive(Debug)]
 pub struct MyLight {
-    pin: Arc<Mutex<OutputPin>>
+    pin: Mutex<OutputPin>
 }
 
 #[tonic::async_trait]
 impl Light for MyLight {
     async fn is_on(&self, _request: Request<Empty>) -> Result<Response<BoolValue>, Status> {
-        Ok(Response::new(BoolValue { value: Arc::clone(&self.pin).lock().unwrap().is_set_high() }))
+        Ok(Response::new(BoolValue { value: self.pin.lock().unwrap().is_set_high() }))
     }
 
     async fn set_is_on(&self, request: Request<BoolValue>) -> Result<Response<Empty>, Status> {
-        Arc::clone(&self.pin).lock().unwrap().write(if request.into_inner().value { Level::High } else { Level::Low });
+        self.pin.lock().unwrap().write(if request.into_inner().value { Level::High } else { Level::Low });
         Ok(Response::new(Empty {}))
     }
 }
@@ -34,7 +34,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     println!("Listening on {}", addr);
     Server::builder()
-        .add_service(LightServer::new(MyLight { pin: Arc::new(Mutex::new(Gpio::new()?.get(18)?.into_output())) }))
+        .add_service(LightServer::new(MyLight { pin: Mutex::new(Gpio::new()?.get(18)?.into_output()) }))
         .serve(addr)
         .await?;
 
