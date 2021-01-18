@@ -1,13 +1,11 @@
 syntax = "proto3";
 
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
+
 package smartlight;
 
 service Light {
-    rpc IsOn(Empty) returns (BoolValue);
-    rpc SetIsOn(BoolValue) returns (Empty);
+    rpc GetIsOn(google.protobuf.Empty) returns (google.protobuf.BoolValue);
+    rpc SetIsOn(google.protobuf.BoolValue) returns (google.protobuf.Empty);
 }
-
-message Empty { }
-message BoolValue {
-    bool value = 1;
-};
