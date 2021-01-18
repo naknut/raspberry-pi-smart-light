@@ -25,5 +25,5 @@ impl Light for Service {
 }
 
 pub fn server(pin: Mutex<OutputPin>) -> LightServer<Service> {
-    return LightServer::new(Service { pin: pin });
+    return LightServer::new(Service { pin });
 }
