@@ -1,6 +1,6 @@
-use tonic::transport::{Server};
+use tonic::transport::Server;
 use rppal::gpio::Gpio;
-use std::sync::{Mutex};
+use std::sync::Mutex;
 
 mod light_service;
 
