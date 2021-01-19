@@ -8,13 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    let client = Client()
+    @ObservedObject var client = Client()
     
     var body: some View {
-        VStack {
-            Button("Toggle On") { client.setIsOn(true) }
-            Button("Toggle Off") { client.setIsOn(false) }
-        }
+        Toggle("Light On", isOn: $client.isOn).padding()
     }
 }
 
