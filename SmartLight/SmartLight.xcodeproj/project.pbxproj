@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42D58B925B93D230027C2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D58B825B93D230027C2F0 /* Assets.xcassets */; };
+		C42D58C025B93D230027C2F0 /* SmartLight Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C42D58BF25B93D230027C2F0 /* SmartLight Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C42D58C725B93D230027C2F0 /* SmartLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D58C625B93D230027C2F0 /* SmartLightApp.swift */; };
+		C42D58C925B93D230027C2F0 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42D58C825B93D230027C2F0 /* ComplicationController.swift */; };
+		C42D58CB25B93D240027C2F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D58CA25B93D240027C2F0 /* Assets.xcassets */; };
+		C42D58CE25B93D240027C2F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D58CD25B93D240027C2F0 /* Preview Assets.xcassets */; };
+		C42D58D225B93D240027C2F0 /* SmartLight.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C42D58B625B93D220027C2F0 /* SmartLight.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C42D58E125B93D310027C2F0 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = C42D58E025B93D310027C2F0 /* GRPC */; };
+		C42D58E625B93D790027C2F0 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* Client.swift */; };
+		C42D58E725B93D7B0027C2F0 /* smartlight.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6725B1243D0095C8BC /* smartlight.pb.swift */; };
+		C42D58E825B93D7E0027C2F0 /* smartlight.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */; };
+		C42D58E925B93D820027C2F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* ContentView.swift */; };
+		C42D58F725B93EFC0027C2F0 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = C42D58F625B93EFC0027C2F0 /* GRPC */; };
 		C448BB5125B109D80095C8BC /* SmartLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3E25B109D80095C8BC /* SmartLightApp.swift */; };
 		C448BB5225B109D80095C8BC /* SmartLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3E25B109D80095C8BC /* SmartLightApp.swift */; };
 		C448BB5325B109D80095C8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* ContentView.swift */; };
@@ -22,7 +35,58 @@
 		C448BB7725B1273C0095C8BC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* Client.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C42D58C125B93D230027C2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448BB3925B109D70095C8BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42D58BE25B93D230027C2F0;
+			remoteInfo = "SmartLight Extension";
+		};
+		C42D58D025B93D240027C2F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C448BB3925B109D70095C8BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42D58B525B93D220027C2F0;
+			remoteInfo = SmartLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C42D58D325B93D240027C2F0 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C42D58D225B93D240027C2F0 /* SmartLight.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42D58D625B93D240027C2F0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C42D58C025B93D230027C2F0 /* SmartLight Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		C42D58B625B93D220027C2F0 /* SmartLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42D58B825B93D230027C2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C42D58BA25B93D230027C2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42D58BF25B93D230027C2F0 /* SmartLight Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmartLight Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42D58C625B93D230027C2F0 /* SmartLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartLightApp.swift; sourceTree = "<group>"; };
+		C42D58C825B93D230027C2F0 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C42D58CA25B93D240027C2F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C42D58CD25B93D240027C2F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C42D58CF25B93D240027C2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C448BB3E25B109D80095C8BC /* SmartLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartLightApp.swift; sourceTree = "<group>"; };
 		C448BB3F25B109D80095C8BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C448BB4025B109D80095C8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -37,6 +101,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C42D58BC25B93D230027C2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42D58E125B93D310027C2F0 /* GRPC in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C448BB4225B109D80095C8BC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -49,19 +121,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42D58F725B93EFC0027C2F0 /* GRPC in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42D58B725B93D220027C2F0 /* SmartLight */ = {
+			isa = PBXGroup;
+			children = (
+				C42D58B825B93D230027C2F0 /* Assets.xcassets */,
+				C42D58BA25B93D230027C2F0 /* Info.plist */,
+			);
+			path = SmartLight;
+			sourceTree = "<group>";
+		};
+		C42D58C325B93D230027C2F0 /* SmartLight Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C42D58C625B93D230027C2F0 /* SmartLightApp.swift */,
+				C42D58C825B93D230027C2F0 /* ComplicationController.swift */,
+				C42D58CA25B93D240027C2F0 /* Assets.xcassets */,
+				C42D58CF25B93D240027C2F0 /* Info.plist */,
+				C42D58CC25B93D240027C2F0 /* Preview Content */,
+			);
+			path = "SmartLight Extension";
+			sourceTree = "<group>";
+		};
+		C42D58CC25B93D240027C2F0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C42D58CD25B93D240027C2F0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C42D58DF25B93D310027C2F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C448BB3825B109D70095C8BC = {
 			isa = PBXGroup;
 			children = (
 				C448BB3D25B109D70095C8BC /* Shared */,
 				C448BB4725B109D80095C8BC /* iOS */,
 				C448BB4E25B109D80095C8BC /* macOS */,
+				C42D58B725B93D220027C2F0 /* SmartLight */,
+				C42D58C325B93D230027C2F0 /* SmartLight Extension */,
 				C448BB4625B109D80095C8BC /* Products */,
+				C42D58DF25B93D310027C2F0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +195,8 @@
 			children = (
 				C448BB4525B109D80095C8BC /* SmartLight.app */,
 				C448BB4D25B109D80095C8BC /* SmartLight.app */,
+				C42D58B625B93D220027C2F0 /* SmartLight.app */,
+				C42D58BF25B93D230027C2F0 /* SmartLight Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,6 +221,43 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C42D58B525B93D220027C2F0 /* SmartLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42D58DA25B93D240027C2F0 /* Build configuration list for PBXNativeTarget "SmartLight" */;
+			buildPhases = (
+				C42D58B425B93D220027C2F0 /* Resources */,
+				C42D58D625B93D240027C2F0 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C42D58C225B93D230027C2F0 /* PBXTargetDependency */,
+			);
+			name = SmartLight;
+			productName = SmartLight;
+			productReference = C42D58B625B93D220027C2F0 /* SmartLight.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C42D58BE25B93D230027C2F0 /* SmartLight Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42D58D925B93D240027C2F0 /* Build configuration list for PBXNativeTarget "SmartLight Extension" */;
+			buildPhases = (
+				C42D58BB25B93D230027C2F0 /* Sources */,
+				C42D58BC25B93D230027C2F0 /* Frameworks */,
+				C42D58BD25B93D230027C2F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmartLight Extension";
+			packageProductDependencies = (
+				C42D58E025B93D310027C2F0 /* GRPC */,
+			);
+			productName = "SmartLight Extension";
+			productReference = C42D58BF25B93D230027C2F0 /* SmartLight Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		C448BB4425B109D80095C8BC /* SmartLight (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C448BB5925B109D80095C8BC /* Build configuration list for PBXNativeTarget "SmartLight (iOS)" */;
@@ -114,10 +265,12 @@
 				C448BB4125B109D80095C8BC /* Sources */,
 				C448BB4225B109D80095C8BC /* Frameworks */,
 				C448BB4325B109D80095C8BC /* Resources */,
+				C42D58D325B93D240027C2F0 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C42D58D125B93D240027C2F0 /* PBXTargetDependency */,
 			);
 			name = "SmartLight (iOS)";
 			packageProductDependencies = (
@@ -140,6 +293,9 @@
 			dependencies = (
 			);
 			name = "SmartLight (macOS)";
+			packageProductDependencies = (
+				C42D58F625B93EFC0027C2F0 /* GRPC */,
+			);
 			productName = "SmartLight (macOS)";
 			productReference = C448BB4D25B109D80095C8BC /* SmartLight.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +309,12 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					C42D58B525B93D220027C2F0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					C42D58BE25B93D230027C2F0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
 					C448BB4425B109D80095C8BC = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -179,11 +341,30 @@
 			targets = (
 				C448BB4425B109D80095C8BC /* SmartLight (iOS) */,
 				C448BB4C25B109D80095C8BC /* SmartLight (macOS) */,
+				C42D58B525B93D220027C2F0 /* SmartLight */,
+				C42D58BE25B93D230027C2F0 /* SmartLight Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C42D58B425B93D220027C2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42D58B925B93D230027C2F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42D58BD25B93D230027C2F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42D58CE25B93D240027C2F0 /* Preview Assets.xcassets in Resources */,
+				C42D58CB25B93D240027C2F0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C448BB4325B109D80095C8BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -203,6 +384,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C42D58BB25B93D230027C2F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42D58C725B93D230027C2F0 /* SmartLightApp.swift in Sources */,
+				C42D58E825B93D7E0027C2F0 /* smartlight.grpc.swift in Sources */,
+				C42D58E925B93D820027C2F0 /* ContentView.swift in Sources */,
+				C42D58E725B93D7B0027C2F0 /* smartlight.pb.swift in Sources */,
+				C42D58E625B93D790027C2F0 /* Client.swift in Sources */,
+				C42D58C925B93D230027C2F0 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C448BB4125B109D80095C8BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,7 +423,110 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C42D58C225B93D230027C2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42D58BE25B93D230027C2F0 /* SmartLight Extension */;
+			targetProxy = C42D58C125B93D230027C2F0 /* PBXContainerItemProxy */;
+		};
+		C42D58D125B93D240027C2F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42D58B525B93D220027C2F0 /* SmartLight */;
+			targetProxy = C42D58D025B93D240027C2F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C42D58D425B93D240027C2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEWJ2U74XT;
+				IBSC_MODULE = SmartLight_Extension;
+				INFOPLIST_FILE = SmartLight/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = app.naknut.SmartLight.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C42D58D525B93D240027C2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PEWJ2U74XT;
+				IBSC_MODULE = SmartLight_Extension;
+				INFOPLIST_FILE = SmartLight/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = app.naknut.SmartLight.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
+		C42D58D725B93D240027C2F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartLight Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = PEWJ2U74XT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SmartLight Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.naknut.SmartLight.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Debug;
+		};
+		C42D58D825B93D240027C2F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SmartLight Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = PEWJ2U74XT;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SmartLight Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = app.naknut.SmartLight.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
+			};
+			name = Release;
+		};
 		C448BB5725B109D80095C8BC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -437,6 +734,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C42D58D925B93D240027C2F0 /* Build configuration list for PBXNativeTarget "SmartLight Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42D58D725B93D240027C2F0 /* Debug */,
+				C42D58D825B93D240027C2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C42D58DA25B93D240027C2F0 /* Build configuration list for PBXNativeTarget "SmartLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42D58D425B93D240027C2F0 /* Debug */,
+				C42D58D525B93D240027C2F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C448BB3C25B109D70095C8BC /* Build configuration list for PBXProject "SmartLight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -478,6 +793,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C42D58E025B93D310027C2F0 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C448BB6125B10AA40095C8BC /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+		C42D58F625B93EFC0027C2F0 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C448BB6125B10AA40095C8BC /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
 		C448BB6225B10AA40095C8BC /* GRPC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C448BB6125B10AA40095C8BC /* XCRemoteSwiftPackageReference "grpc-swift" */;
