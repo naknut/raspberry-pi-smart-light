@@ -11,6 +11,8 @@ try:
 except ImportError:
     import gobject as GObject
 
+from gpiozero import LED
+
 mainloop = None
 
 BLUEZ_SERVICE_NAME = 'org.bluez'
@@ -51,7 +53,7 @@ class Application(dbus.service.Object):
         self.path = '/'
         self.services = []
         dbus.service.Object.__init__(self, bus, self.path)
-        self.add_service(LightService(bus, 0))
+        self.add_service(LightService(bus, 0, LED(18)))
 
     def get_path(self):
         return dbus.ObjectPath(self.path)
@@ -257,27 +259,30 @@ class LightService(Service):
     """
     UUID = 'b2689aa8-36e3-4587-af74-072701200e7a'
 
-    def __init__(self, bus, index):
+    def __init__(self, bus, index, led):
         Service.__init__(self, bus, index, self.UUID, True)
-        self.add_characteristic(IsOnCharacteristic(bus, 0, self))
+        self.add_characteristic(IsOnCharacteristic(bus, 0, self, led))
 
 
 class IsOnCharacteristic(Characteristic):
     UUID = 'edf358c3-ab9e-43e3-8337-c1ce5d8e9464'
-    isOn = [0x0]
 
-    def __init__(self, bus, index, service):
+    def __init__(self, bus, index, service, led):
         Characteristic.__init__(
                 self, bus, index,
                 self.UUID,
                 ['read', 'write'],
                 service)
+        self.led = led
 
     def ReadValue(self, options):
-        return self.isOn
+        return [self.led.is_lit]
 
     def WriteValue(self, value, options):
-        self.isOn = value
+        if value == [0x0]:
+            self.led.off()
+        else:
+            self.led.on()
 
 
 def register_app_cb():
