@@ -11,8 +11,7 @@ import SwiftUI
 struct SmartLightApp: App {
     var body: some Scene {
         WindowGroup {
-            Text("Test")
-            //ContentView(light: GRPCLight(host: "192.168.4.54"))
+            MainMenu()
         }
     }
 }
