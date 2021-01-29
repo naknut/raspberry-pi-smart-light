@@ -15,15 +15,15 @@
 		C42D58CE25B93D240027C2F0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C42D58CD25B93D240027C2F0 /* Preview Assets.xcassets */; };
 		C42D58D225B93D240027C2F0 /* SmartLight.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C42D58B625B93D220027C2F0 /* SmartLight.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		C42D58E125B93D310027C2F0 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = C42D58E025B93D310027C2F0 /* GRPC */; };
-		C42D58E625B93D790027C2F0 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* Client.swift */; };
+		C42D58E625B93D790027C2F0 /* GRPCLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* GRPCLight.swift */; };
 		C42D58E725B93D7B0027C2F0 /* smartlight.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6725B1243D0095C8BC /* smartlight.pb.swift */; };
 		C42D58E825B93D7E0027C2F0 /* smartlight.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */; };
-		C42D58E925B93D820027C2F0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* ContentView.swift */; };
+		C42D58E925B93D820027C2F0 /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* LightView.swift */; };
 		C42D58F725B93EFC0027C2F0 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = C42D58F625B93EFC0027C2F0 /* GRPC */; };
 		C448BB5125B109D80095C8BC /* SmartLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3E25B109D80095C8BC /* SmartLightApp.swift */; };
 		C448BB5225B109D80095C8BC /* SmartLightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3E25B109D80095C8BC /* SmartLightApp.swift */; };
-		C448BB5325B109D80095C8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* ContentView.swift */; };
-		C448BB5425B109D80095C8BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* ContentView.swift */; };
+		C448BB5325B109D80095C8BC /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* LightView.swift */; };
+		C448BB5425B109D80095C8BC /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB3F25B109D80095C8BC /* LightView.swift */; };
 		C448BB5525B109D80095C8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C448BB4025B109D80095C8BC /* Assets.xcassets */; };
 		C448BB5625B109D80095C8BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C448BB4025B109D80095C8BC /* Assets.xcassets */; };
 		C448BB6325B10AA40095C8BC /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = C448BB6225B10AA40095C8BC /* GRPC */; };
@@ -31,8 +31,32 @@
 		C448BB6925B1243D0095C8BC /* smartlight.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */; };
 		C448BB6A25B1243D0095C8BC /* smartlight.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6725B1243D0095C8BC /* smartlight.pb.swift */; };
 		C448BB6B25B1243D0095C8BC /* smartlight.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB6725B1243D0095C8BC /* smartlight.pb.swift */; };
-		C448BB7625B1273C0095C8BC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* Client.swift */; };
-		C448BB7725B1273C0095C8BC /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* Client.swift */; };
+		C448BB7625B1273C0095C8BC /* GRPCLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* GRPCLight.swift */; };
+		C448BB7725B1273C0095C8BC /* GRPCLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C448BB7525B1273C0095C8BC /* GRPCLight.swift */; };
+		C4D0B7B125C26E4A0010BE4A /* BLESearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7B025C26E4A0010BE4A /* BLESearcher.swift */; };
+		C4D0B7B225C26E4A0010BE4A /* BLESearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7B025C26E4A0010BE4A /* BLESearcher.swift */; };
+		C4D0B7B325C26E4A0010BE4A /* BLESearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7B025C26E4A0010BE4A /* BLESearcher.swift */; };
+		C4D0B7BD25C2828F0010BE4A /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7BC25C2828F0010BE4A /* Light.swift */; };
+		C4D0B7BE25C2828F0010BE4A /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7BC25C2828F0010BE4A /* Light.swift */; };
+		C4D0B7BF25C2828F0010BE4A /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7BC25C2828F0010BE4A /* Light.swift */; };
+		C4D0B7C525C283230010BE4A /* BLELight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7C425C283230010BE4A /* BLELight.swift */; };
+		C4D0B7C625C283230010BE4A /* BLELight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7C425C283230010BE4A /* BLELight.swift */; };
+		C4D0B7C725C283230010BE4A /* BLELight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7C425C283230010BE4A /* BLELight.swift */; };
+		C4D0B7CD25C296420010BE4A /* MockLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7CC25C296420010BE4A /* MockLight.swift */; };
+		C4D0B7CE25C296420010BE4A /* MockLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7CC25C296420010BE4A /* MockLight.swift */; };
+		C4D0B7CF25C296420010BE4A /* MockLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7CC25C296420010BE4A /* MockLight.swift */; };
+		C4D0B7D925C361D00010BE4A /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7D825C361D00010BE4A /* MainMenu.swift */; };
+		C4D0B7DA25C361D00010BE4A /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7D825C361D00010BE4A /* MainMenu.swift */; };
+		C4D0B7DB25C361D00010BE4A /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7D825C361D00010BE4A /* MainMenu.swift */; };
+		C4D0B7E125C3642B0010BE4A /* WiFiMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7E025C3642B0010BE4A /* WiFiMenu.swift */; };
+		C4D0B7E225C3642B0010BE4A /* WiFiMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7E025C3642B0010BE4A /* WiFiMenu.swift */; };
+		C4D0B7E325C3642B0010BE4A /* WiFiMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7E025C3642B0010BE4A /* WiFiMenu.swift */; };
+		C4D0B7F525C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7F425C36CBF0010BE4A /* WiFiMenuViewModel.swift */; };
+		C4D0B7F625C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7F425C36CBF0010BE4A /* WiFiMenuViewModel.swift */; };
+		C4D0B7F725C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B7F425C36CBF0010BE4A /* WiFiMenuViewModel.swift */; };
+		C4D0B80725C3768A0010BE4A /* BLEMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B80625C3768A0010BE4A /* BLEMenu.swift */; };
+		C4D0B80825C3768A0010BE4A /* BLEMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B80625C3768A0010BE4A /* BLEMenu.swift */; };
+		C4D0B80925C3768A0010BE4A /* BLEMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D0B80625C3768A0010BE4A /* BLEMenu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +112,7 @@
 		C42D58CD25B93D240027C2F0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C42D58CF25B93D240027C2F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C448BB3E25B109D80095C8BC /* SmartLightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartLightApp.swift; sourceTree = "<group>"; };
-		C448BB3F25B109D80095C8BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C448BB3F25B109D80095C8BC /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		C448BB4025B109D80095C8BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C448BB4525B109D80095C8BC /* SmartLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C448BB4825B109D80095C8BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,7 +121,15 @@
 		C448BB5025B109D80095C8BC /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smartlight.grpc.swift; sourceTree = "<group>"; };
 		C448BB6725B1243D0095C8BC /* smartlight.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = smartlight.pb.swift; sourceTree = "<group>"; };
-		C448BB7525B1273C0095C8BC /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		C448BB7525B1273C0095C8BC /* GRPCLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GRPCLight.swift; sourceTree = "<group>"; };
+		C4D0B7B025C26E4A0010BE4A /* BLESearcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLESearcher.swift; sourceTree = "<group>"; };
+		C4D0B7BC25C2828F0010BE4A /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		C4D0B7C425C283230010BE4A /* BLELight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLELight.swift; sourceTree = "<group>"; };
+		C4D0B7CC25C296420010BE4A /* MockLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLight.swift; sourceTree = "<group>"; };
+		C4D0B7D825C361D00010BE4A /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		C4D0B7E025C3642B0010BE4A /* WiFiMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMenu.swift; sourceTree = "<group>"; };
+		C4D0B7F425C36CBF0010BE4A /* WiFiMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiMenuViewModel.swift; sourceTree = "<group>"; };
+		C4D0B80625C3768A0010BE4A /* BLEMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEMenu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,12 +212,14 @@
 		C448BB3D25B109D70095C8BC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C4D0B80125C376430010BE4A /* BLE */,
+				C4D0B7FC25C375950010BE4A /* WiFi */,
 				C448BB3E25B109D80095C8BC /* SmartLightApp.swift */,
-				C448BB3F25B109D80095C8BC /* ContentView.swift */,
+				C448BB3F25B109D80095C8BC /* LightView.swift */,
 				C448BB4025B109D80095C8BC /* Assets.xcassets */,
-				C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */,
-				C448BB6725B1243D0095C8BC /* smartlight.pb.swift */,
-				C448BB7525B1273C0095C8BC /* Client.swift */,
+				C4D0B7BC25C2828F0010BE4A /* Light.swift */,
+				C4D0B7CC25C296420010BE4A /* MockLight.swift */,
+				C4D0B7D825C361D00010BE4A /* MainMenu.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -216,6 +250,28 @@
 				C448BB5025B109D80095C8BC /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C4D0B7FC25C375950010BE4A /* WiFi */ = {
+			isa = PBXGroup;
+			children = (
+				C448BB7525B1273C0095C8BC /* GRPCLight.swift */,
+				C448BB6625B1243D0095C8BC /* smartlight.grpc.swift */,
+				C448BB6725B1243D0095C8BC /* smartlight.pb.swift */,
+				C4D0B7E025C3642B0010BE4A /* WiFiMenu.swift */,
+				C4D0B7F425C36CBF0010BE4A /* WiFiMenuViewModel.swift */,
+			);
+			path = WiFi;
+			sourceTree = "<group>";
+		};
+		C4D0B80125C376430010BE4A /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				C4D0B7B025C26E4A0010BE4A /* BLESearcher.swift */,
+				C4D0B7C425C283230010BE4A /* BLELight.swift */,
+				C4D0B80625C3768A0010BE4A /* BLEMenu.swift */,
+			);
+			path = BLE;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,12 +444,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4D0B80925C3768A0010BE4A /* BLEMenu.swift in Sources */,
+				C4D0B7DB25C361D00010BE4A /* MainMenu.swift in Sources */,
 				C42D58C725B93D230027C2F0 /* SmartLightApp.swift in Sources */,
 				C42D58E825B93D7E0027C2F0 /* smartlight.grpc.swift in Sources */,
-				C42D58E925B93D820027C2F0 /* ContentView.swift in Sources */,
+				C4D0B7CF25C296420010BE4A /* MockLight.swift in Sources */,
+				C4D0B7B325C26E4A0010BE4A /* BLESearcher.swift in Sources */,
+				C4D0B7C725C283230010BE4A /* BLELight.swift in Sources */,
+				C42D58E925B93D820027C2F0 /* LightView.swift in Sources */,
 				C42D58E725B93D7B0027C2F0 /* smartlight.pb.swift in Sources */,
-				C42D58E625B93D790027C2F0 /* Client.swift in Sources */,
+				C42D58E625B93D790027C2F0 /* GRPCLight.swift in Sources */,
+				C4D0B7E325C3642B0010BE4A /* WiFiMenu.swift in Sources */,
+				C4D0B7BF25C2828F0010BE4A /* Light.swift in Sources */,
 				C42D58C925B93D230027C2F0 /* ComplicationController.swift in Sources */,
+				C4D0B7F725C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,10 +465,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C448BB5325B109D80095C8BC /* ContentView.swift in Sources */,
+				C448BB5325B109D80095C8BC /* LightView.swift in Sources */,
 				C448BB6A25B1243D0095C8BC /* smartlight.pb.swift in Sources */,
+				C4D0B7E125C3642B0010BE4A /* WiFiMenu.swift in Sources */,
+				C4D0B7B125C26E4A0010BE4A /* BLESearcher.swift in Sources */,
+				C4D0B80725C3768A0010BE4A /* BLEMenu.swift in Sources */,
 				C448BB6825B1243D0095C8BC /* smartlight.grpc.swift in Sources */,
-				C448BB7625B1273C0095C8BC /* Client.swift in Sources */,
+				C4D0B7C525C283230010BE4A /* BLELight.swift in Sources */,
+				C4D0B7D925C361D00010BE4A /* MainMenu.swift in Sources */,
+				C4D0B7CD25C296420010BE4A /* MockLight.swift in Sources */,
+				C448BB7625B1273C0095C8BC /* GRPCLight.swift in Sources */,
+				C4D0B7BD25C2828F0010BE4A /* Light.swift in Sources */,
+				C4D0B7F525C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */,
 				C448BB5125B109D80095C8BC /* SmartLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,10 +485,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C448BB5425B109D80095C8BC /* ContentView.swift in Sources */,
+				C448BB5425B109D80095C8BC /* LightView.swift in Sources */,
 				C448BB6B25B1243D0095C8BC /* smartlight.pb.swift in Sources */,
+				C4D0B7E225C3642B0010BE4A /* WiFiMenu.swift in Sources */,
+				C4D0B7B225C26E4A0010BE4A /* BLESearcher.swift in Sources */,
+				C4D0B80825C3768A0010BE4A /* BLEMenu.swift in Sources */,
 				C448BB6925B1243D0095C8BC /* smartlight.grpc.swift in Sources */,
-				C448BB7725B1273C0095C8BC /* Client.swift in Sources */,
+				C4D0B7C625C283230010BE4A /* BLELight.swift in Sources */,
+				C4D0B7DA25C361D00010BE4A /* MainMenu.swift in Sources */,
+				C4D0B7CE25C296420010BE4A /* MockLight.swift in Sources */,
+				C448BB7725B1273C0095C8BC /* GRPCLight.swift in Sources */,
+				C4D0B7BE25C2828F0010BE4A /* Light.swift in Sources */,
+				C4D0B7F625C36CBF0010BE4A /* WiFiMenuViewModel.swift in Sources */,
 				C448BB5225B109D80095C8BC /* SmartLightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

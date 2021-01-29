@@ -271,7 +271,7 @@ class IsOnCharacteristic(Characteristic):
         Characteristic.__init__(
                 self, bus, index,
                 self.UUID,
-                ['read', 'write'],
+                ['read', 'write-without-response'],
                 service)
         self.led = led
 

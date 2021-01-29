@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @ObservedObject var client = Client()
+struct LightView<L: Light>: View {
+    @ObservedObject var light: L
     
     var body: some View {
-        Toggle("Light On", isOn: $client.isOn).padding()
+        Toggle("Light On", isOn: $light.isOn).padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LightView(light: MockLight())
     }
 }
